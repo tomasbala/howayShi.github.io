@@ -1,8 +1,8 @@
 # Site settings 配置站点
-title: 'howayShi'
+title: 'your awesome title'
 description: 'your web description'
 keywords: 'your web keywords, another keywords'
-url: 'https://abc.github.io' # your host
+url: 'https://howayshi.github.io' # your host
 
 # nav 中文字符空格：&emsp;
 nav: # 最佳体验 六个标签 且最好每个标签不超过4中文字
@@ -14,12 +14,12 @@ nav: # 最佳体验 六个标签 且最好每个标签不超过4中文字
 
 # 博主
 author: true
-name: 'your awesome name'
-NickName: 'your awesome nickname'
-webtitle: 'your awesome webtitle'
-bio: 'your awesome bio'
+name: '托马斯巴拉巴拉'
+NickName: '托马斯巴拉巴拉'
+webtitle: '托马斯巴拉巴拉'
+bio: '托马斯巴拉巴拉'
 about: true
-aboutyou: 'your introduction'
+aboutyou: '2017中国工程机器人大赛暨国际公开赛“中型六旋翼”亚军'
 portraits: '/assets/profile.jpeg' # your portraits image file path
 
 # SNS
