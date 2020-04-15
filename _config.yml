@@ -15,9 +15,9 @@ nav: # 最佳体验 六个标签 且最好每个标签不超过4中文字
 # 博主
 author: true
 name: 'howayShi'
-NickName: '托马斯巴拉巴拉'
-webtitle: '托马斯巴拉巴拉'
-bio: '托马斯巴拉巴拉'
+NickName: 'howayShi'
+webtitle: 'howayShi'
+bio: 'howayShi'
 about: true
 aboutyou: '我什么都不想说了，这太麻烦了'
 portraits: '/assets/profile.jpeg' # your portraits image file path
