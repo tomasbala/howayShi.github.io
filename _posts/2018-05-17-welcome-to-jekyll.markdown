@@ -10,15 +10,13 @@ subtitle: '目前放置第五章的内容'
 第五章主要使用Simulink进行仿真，不方便代码进行，所以我放到了我的仓库中:
 
 {% highlight ruby %}
-	点击下方的紫色epositories，进入我的仓库，按照题目对应编号寻找答案即可。
-	全部题目都由我15号在电脑上模拟。由于时间紧促没有来得及检查和验证，
-	有错误还请谅解。
-	
-				——tomas.howayShi
+	 hello!
 {% endhighlight %}
 
-Check out the [Repositories][jekyll-docs] for more info on how to do MatLab-Control-system-simulation . 
+Check out the [Repositories][jekyll-docs] for more info on how to do MatLab-Control-system-simulation .   
+点击上方紫色Repositories进入到我的控制系统仿真课专用仓库Chapter 5中，寻找对应题目的章节。  
+鉴于全部题目都由我15号夜间敲击而出，时间紧凑没有进行检查和验证，难免有错误出现，还请诸位好汉谅解。
 
-[jekyll-docs]: https://github.com/howayShi/MatLab-Control-system-simulation
+[jekyll-docs]: https://github.com/howayShi/MatLab-Control-system-simulation/tree/master/Chapter%205
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
