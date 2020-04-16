@@ -1,6 +1,6 @@
 # Site settings 配置站点
 title: 'Thomas's Secret Garden'
-description: 'your web description'
+description: 'Thomas's Secret Garden'
 keywords: 'your web keywords, another keywords'
 url: 'https://howayshi.github.io' # your host
 
@@ -47,7 +47,7 @@ paginatepath: ['page:num']
 
 # since
 footer:
-  since: 2018
+  since: 2019
 
 # Markdown
 markdown: kramdown
