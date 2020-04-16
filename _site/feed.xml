@@ -1,7 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-16T11:26:07+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">your awesome title</title><subtitle>your web description</subtitle><author><name>true</name></author><entry><title type="html">控制系统仿真MatLab托马斯的代码</title><link href="http://localhost:4000/2020/04/14/welcome-to-jekyll.html" rel="alternate" type="text/html" title="控制系统仿真MatLab托马斯的代码" /><published>2020-04-14T14:05:21+08:00</published><updated>2020-04-14T14:05:21+08:00</updated><id>http://localhost:4000/2020/04/14/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2020/04/14/welcome-to-jekyll.html">&lt;p&gt;第五章主要使用Simulink进行仿真，不方便代码进行，所以我放到了我的仓库中:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-16T11:44:53+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">your awesome title</title><subtitle>your web description</subtitle><author><name>true</name></author><entry><title type="html">控制系统仿真MatLab史昊伟的代码</title><link href="http://localhost:4000/2020/04/14/welcome-to-jekyll.html" rel="alternate" type="text/html" title="控制系统仿真MatLab史昊伟的代码" /><published>2020-04-14T14:05:21+08:00</published><updated>2020-04-14T14:05:21+08:00</updated><id>http://localhost:4000/2020/04/14/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2020/04/14/welcome-to-jekyll.html">&lt;p&gt;第五章主要使用Simulink进行仿真，不方便代码进行，所以我放到了我的仓库中:&lt;/p&gt;
+
+&lt;p&gt;本文章由 [史昊伟] 编辑并进行创作，使用MIT许可协议（The MIT License）。请按照MIT License规定使用本内容。&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;	 &lt;span class=&quot;n&quot;&gt;hello!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Check out the &lt;a href=&quot;https://github.com/howayShi/MatLab-Control-system-simulation/tree/master/Chapter%205&quot;&gt;Repositories&lt;/a&gt; for more info on how to do MatLab-Control-system-simulation . &lt;br /&gt;
-点击上方紫色Repositories进入到我的控制系统仿真课专用仓库Chapter 5中，寻找对应题目的章节。&lt;br /&gt;
-鉴于全部题目都由我15号夜间敲击而出，时间紧凑没有进行检查和验证，难免有错误出现，还请诸位好汉谅解。&lt;/p&gt;</content><author><name>true</name></author><category term="jekyll" /><category term="update" /><summary type="html">第五章主要使用Simulink进行仿真，不方便代码进行，所以我放到了我的仓库中:</summary></entry></feed>
+点击上方紫色Repositories进入到我的控制系统仿真课专用仓库Chapter 5中，寻找对应题目的章节。 或者参考下方图片 
+鉴于全部题目都由我15号夜间敲击而出，时间紧凑没有进行检查和验证，难免有错误出现，还请诸位好汉谅解。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/Chapter/5.4.png&quot; alt=&quot;5.4&quot; /&gt;
+&lt;img src=&quot;/image/Chapter/5.5.png&quot; alt=&quot;5.5&quot; /&gt;
+&lt;img src=&quot;/image/Chapter/5.6.png&quot; alt=&quot;5.6&quot; /&gt;
+&lt;img src=&quot;/image/Chapter/5.7.png&quot; alt=&quot;5.7&quot; /&gt;
+&lt;img src=&quot;/image/Chapter/5.8.png&quot; alt=&quot;5.8&quot; /&gt;
+&lt;img src=&quot;/image/Chapter/5.9-1.png&quot; alt=&quot;5.9&quot; /&gt;
+&lt;img src=&quot;/image/Chapter/5.9-2.png&quot; alt=&quot;5.9&quot; /&gt;
+&lt;img src=&quot;/image/Chapter/5.9-3.png&quot; alt=&quot;5.9&quot; /&gt;
+&lt;img src=&quot;/image/Chapter/5.10.png&quot; alt=&quot;5.9&quot; /&gt;
+&lt;img src=&quot;/image/Chapter/5.11.png&quot; alt=&quot;5.9&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="MatLab" /><category term="自动化" /><summary type="html">第五章主要使用Simulink进行仿真，不方便代码进行，所以我放到了我的仓库中:</summary></entry></feed>
