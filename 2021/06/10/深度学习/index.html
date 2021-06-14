@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   
-  <title>月度计划 - tomas</title>
+  <title>深度学习笔记 - tomas</title>
   
     <link rel="shortcut icon" href="/favicon.png">
   
@@ -91,42 +91,57 @@
             
             
             
+            <span>June</span>
             
             
             
             
             
             
-            <span>December</span>
             
-            <span>29,</span>
-            <span>2020</span>
+            <span>10,</span>
+            <span>2021</span>
         </div>
         
 
-        <h2 class="title">月度计划</h2>
+        <h2 class="title">深度学习笔记</h2>
     </div>
 
     <div class="divider"></div>
 
     <div class="content">
-        <blockquote>
-<p>2021工作计划表</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>日程安排</th>
-<th>任务</th>
-<th>详细</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>2021.6.20</td>
-<td>高等数学强化开始</td>
-<td>武忠祥强化课+660题复习+辅导讲义课后题</td>
-</tr>
-</tbody></table>
+        <p>  本篇用于记录向沐神学习深度学习的笔记</p>
+<h3 id="线性回归从零开始实现"><a href="#线性回归从零开始实现" class="headerlink" title="线性回归从零开始实现"></a>线性回归从零开始实现</h3><p>从零开始实现整个方法，包括流水线、模型、损失函数和小批量随机梯度下降优化器。</p>
+<p>首先导入需要用到的科学计算包</p>
+<pre><code>%matplotlib inline 
+import random
+import torch
+from d2l import torch as d2l</code></pre>
+<p>根据带有噪声的线性模型构造一个人造数据集。y=Xw+b+e。这里使用线性模型参数w=[2，-3.4]T、b=4.2和噪声项e生成数据集及其标签。</p>
+<pre><code>def synthetic_data(w, b, num_examples):  
+&quot;&quot;&quot;生成 y = Xw + b + 噪声。&quot;&quot;&quot;
+X = torch.normal(0, 1, (num_examples, len(w))) #均值为0，方差为1
+y = torch.matmul(X, w) + b #设置方程
+y += torch.normal(0, 0.01, y.shape) #加入一个均值为0，方差为1的噪音e
+return X, y.reshape((-1, 1)) #更改形状为一个列向量返回
+
+true_w = torch.tensor([2, -3.4]) #真实W
+true_b = 4.2 #真实b
+features, labels = synthetic_data(true_w, true_b, 1000) #通过上述函数生成特征和标注，得到训练样本。</code></pre>
+<p>feature特征中的每一行都包含一个二维数据样本，labels中的每一行都包含一维标签值，可以通过下列代码打印某个序号的样本以及绘制：</p>
+<pre><code> print(&#39;features:&#39;, features[0], &#39;\nlabel:&#39;, labels[0])
+
+ d2l.set_figsize()
+ d2l.plt.scatter(features[:, 1].detach().numpy(),labels.detach().numpy(), 1); #绘制特征的第一列，detach是从计算图中提取，labels同理，分别作为xy绘图。</code></pre>
+<p>回想一下，训练模型时要对数据集进行遍历，每次抽取一小批量样本，并使用它们来更新我们的模型。 由于这个过程是训练机器学习算法的基础，所以有必要定义一个函数，该函数能打乱数据集中的样本并以小批量方式获取数据。定义一个data_iter函数，该函数接收批量大小、特征矩阵和标签向量作为输入，生成大小为batch_size的小批量</p>
+<pre><code>def data_iter(batch_size, features, labels):
+num_examples = len(features)  #检查有多少样本
+indices = list(range(num_examples)) #转换成list。range从0-end
+# 这些样本是随机读取的，没有特定的顺序
+random.shuffle(indices) #把下标完全打乱
+for i in range(0, num_examples, batch_size):  #0到n，每次跨越batch_size个大小
+    batch_indices = torch.tensor(indices[i:min(i +batch_size, num_examples)]) #为什么使用min函数？batch_size可能会超出数据集的数据范围，当i+bat大于n时候取最小也就是最后一个值。
+    yield features[batch_indices], labels[batch_indices] #yield是python的return，返回特征和标签    </code></pre>
 
     </div>
 
