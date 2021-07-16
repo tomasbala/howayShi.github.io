@@ -142,6 +142,37 @@ random.shuffle(indices) #把下标完全打乱
 for i in range(0, num_examples, batch_size):  #0到n，每次跨越batch_size个大小
     batch_indices = torch.tensor(indices[i:min(i +batch_size, num_examples)]) #为什么使用min函数？batch_size可能会超出数据集的数据范围，当i+bat大于n时候取最小也就是最后一个值。
     yield features[batch_indices], labels[batch_indices] #yield是python的return，返回特征和标签    </code></pre>
+<p>定义初始化模型参数。在我们开始用小批量随机梯度下降优化我们的模型参数之前，我们需要先有一些参数。 在下面的代码中，我们通过从均值为0、标准差为0.01的正态分布中采样随机数来初始化权重，并将偏置初始化为0。在初始化参数之后，我们的任务是更新这些参数，直到这些参数足够拟合我们的数据。 每次更新都需要计算损失函数关于模型参数的梯度。有了这个梯度，我们就可以向减小损失的方向更新每个参数。</p>
+<pre><code> w = torch.normal(0, 0.01, size=(2, 1), requires_grad=True) #需要计算梯度，所以grad=1
+ b = torch.zeros(1, requires_grad=True) #偏差也需要计算梯度</code></pre>
+<p>定义模型。将模型的输入和参数同模型的输出关联起来。 要计算线性模型的输出，我们只需计算输入特征  X  和模型权重 w 的矩阵-向量乘法后加上偏置 b 。注意，上面的 Xw  是一个向量，而 b 是一个标量。</p>
+<pre><code>def linreg(X, w, b):  #@save
+&quot;&quot;&quot;线性回归模型。&quot;&quot;&quot;
+return torch.matmul(X, w) + b</code></pre>
+<p>因为要更新模型。需要计算损失函数的梯度，所以我们应该先定义损失函数。</p>
+<pre><code>def squared_loss(y_hat, y):  #@save
+&quot;&quot;&quot;均方损失。&quot;&quot;&quot;
+return (y_hat - y.reshape(y_hat.shape))**2 / 2</code></pre>
+<p>定义优化算法。在每一步中，使用从数据集中随机抽取的一个小批量，然后根据参数计算损失的梯度。接下来，朝着减少损失的方向更新我们的参数。 下面的函数实现小批量随机梯度下降更新。该函数接受模型参数集合、学习速率和批量大小作为输入。每一步更新的大小由学习速率lr决定。 因为我们计算的损失是一个批量样本的总和，所以我们用批量大小（batch_size）来归一化步长，这样步长大小就不会取决于我们对批量大小的选择。</p>
+<pre><code>def sgd(params, lr, batch_size):  #@save
+&quot;&quot;&quot;小批量随机梯度下降。&quot;&quot;&quot;
+with torch.no_grad():  #更新的时候不用梯度计算
+    for param in params:
+        param -= lr * param.grad / batch_size #梯度存在于grad里，同时求取均值
+        param.grad.zero_() #手动把梯度设置为0</code></pre>
+<p>训练过程</p>
+<pre><code>lr = 0.03</code></pre>
+<p>num_epochs = 3<br>net = linreg<br>loss = squared_loss</p>
+<pre><code>for epoch in range(num_epochs):
+    for X, y in data_iter(batch_size, features, labels):
+        l = loss(net(X, w, b), y)  # `X`和`y`的小批量损失
+        # 因为`l`形状是(`batch_size`, 1)，而不是一个标量。`l`中的所有元素被加到一起，
+        # 并以此计算关于[`w`, `b`]的梯度
+        l.sum().backward()
+        sgd([w, b], lr, batch_size)  # 使用参数的梯度更新参数
+    with torch.no_grad():  #评价进度，不需要计算梯度，所以no_grad
+        train_l = loss(net(features, w, b), labels)
+        print(f&#39;epoch &#123;epoch + 1&#125;, loss &#123;float(train_l.mean()):f&#125;&#39;)</code></pre>
 
     </div>
 
