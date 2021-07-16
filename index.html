@@ -1,292 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!DOCTYPE html>
-<html>
 
+<!-- Head tag -->
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-  
-  <title>tomas</title>
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    <link rel='manifest' href='/manifest.json'>
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Stay hungry, stay foolish">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
 
-  
-<link rel="stylesheet" href="/css/var.css">
+    <title>
+        
+          
+        
+    </title>
 
-  
-<link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://howayShi.github.io/">
 
-  
-<link rel="stylesheet" href="/css/typography.css">
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 
-  
-<link rel="stylesheet" href="/css/code-highlighting.css">
 
-  
-<link rel="stylesheet" href="/css/components.css">
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/hux-blog.min.css">
 
-  
-<link rel="stylesheet" href="/css/nav.css">
 
-  
-<link rel="stylesheet" href="/css/paginator.css">
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
 
-  
-<link rel="stylesheet" href="/css/footer.css">
 
-  
-<link rel="stylesheet" href="/css/post-list.css">
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-  
-<link rel="stylesheet" href="/css/waline.css">
 
-  
-  
-<link rel="stylesheet" href="/css/index.css">
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
 
-  
-  
 
-  
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
 <meta name="generator" content="Hexo 5.2.0"></head>
-    <body>
-        <nav id="theme-nav">
-    <div class="inner">
-        <a class="title" href="/">HowayShi‘s blog</a>
-        <div class="nav-arrow"></div>
-        <div class="nav-items">
-            <a class="nav-item nav-item-home" href="/">Home</a>
-            
-            
-            <a class="nav-item" href="/archives">内容</a>
-            
-            
-            
-            <a class="nav-item" href="/projects">项目</a>
-            
-            
-            
-            <a class="nav-item" href="/about">关于我</a>
-            
-            
-            
-            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/howayShi" target="_blank">&nbsp;</a>
-            
-            
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">tomas</a>
         </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                        <li>
+                            <a href="/about/">史昊伟</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
+    <!-- /.container -->
 </nav>
-        <div class="container">
-    
-    <div class="hero">
-        <div class="group">
-            <h2 class="sub">Toma史老师</h2>
-            <h2 class="large">Stay hungry, stay foolish</h2>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>tomas</h1>
+                    <!--<hr class="small">-->
+                    <span class="subheading">Toma史老师</span>
+                </div>
+            </div>
         </div>
     </div>
+</header>
 
-    <h2 class="section-title">Latest Posts</h2>
-    
 
-    <div class="post-list">
-        
-        <article class="post-list-item">
-            <a href="/2021/06/15/%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                
-                <div class="content">
-                    <div class="title">
-                        单片机学习笔记
-                    </div>
-                    
-                    <div class="time">
-                        
-                        
-                        
-                        
-                        
-                        
-                        <span>June</span>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <span>&nbsp;15,&nbsp;</span>
-                        <span>2021</span>
-                    </div>
-                </div>
-            </a>
-        </article>
-        
-        <article class="post-list-item">
-            <a href="/2021/06/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                
-                <div class="content">
-                    <div class="title">
-                        深度学习笔记
-                    </div>
-                    
-                    <div class="time">
-                        
-                        
-                        
-                        
-                        
-                        
-                        <span>June</span>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <span>&nbsp;10,&nbsp;</span>
-                        <span>2021</span>
-                    </div>
-                </div>
-            </a>
-        </article>
-        
-        <article class="post-list-item">
-            <a href="/2021/06/10/C++%E5%AD%A6%E4%B9%A0/">
-                
-                <div class="content">
-                    <div class="title">
-                        C++学习
-                    </div>
-                    
-                    <div class="time">
-                        
-                        
-                        
-                        
-                        
-                        
-                        <span>June</span>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <span>&nbsp;10,&nbsp;</span>
-                        <span>2021</span>
-                    </div>
-                </div>
-            </a>
-        </article>
-        
-        <article class="post-list-item">
-            <a href="/2020/12/29/%E6%9C%88%E5%BA%A6%E8%AE%A1%E5%88%92/">
-                
-                <div class="content">
-                    <div class="title">
-                        月度计划
-                    </div>
-                    
-                    <div class="time">
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <span>December</span>
-                        
-                        <span>&nbsp;29,&nbsp;</span>
-                        <span>2020</span>
-                    </div>
-                </div>
-            </a>
-        </article>
-        
-        <article class="post-list-item">
-            <a href="/2020/12/11/843%E5%A4%A7%E7%BA%B2/">
-                
-                <div class="content">
-                    <div class="title">
-                        843自动控制原理复习大纲
-                    </div>
-                    
-                    <div class="time">
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <span>December</span>
-                        
-                        <span>&nbsp;11,&nbsp;</span>
-                        <span>2020</span>
-                    </div>
-                </div>
-            </a>
-        </article>
-        
-    </div>
 
-    
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            
+                <!-- Main Content -->
+
+
+<div class="post-preview">
+
+    <a href="/2021/06/15/单片机学习笔记/">
+        <h2 class="post-title">
+            单片机学习笔记
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            单片机学习笔记1.单片机预备知识
+电平特性：51单片机为TTL电平，高+5V,低0V；计算机串口为RS232电平，高-12V，低+12V。所以单片机与计算机通讯需要加电平转换芯片max232（实验班左下角）。
+
+十六进制：是二进制的简短表示形式。规律：一般把四个二进制数放在一起转换成一个十六进制数，转换时先把二进制数转换成十进制数，再把十进制数转换成十六进制数。
+
+
+
+H
+B
+
+
+
+十六进制......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by  on
+        2021-06-15
+    </p>
+
 </div>
-        <footer>
-    <div class="inner">
-        <div class="links">
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2021/06/10/深度学习/">
+        <h2 class="post-title">
+            深度学习笔记
+        </h2>
+        <h3 class="post-subtitle">
             
-            <div class="group">
-                <h4 class="title">Blog</h4>
-                
-                <a href="/" class="item" target="_blank">Blog</a>
-                
-                <a href="/archives" class="item" target="_blank">Archives</a>
-                
-                <a href="/about" class="item" target="_blank">About</a>
-                
-            </div>
-            
-            <div class="group">
-                <h4 class="title">Projects</h4>
-                
-            </div>
-            
-            <div class="group">
-                <h4 class="title">Me</h4>
-                
-                <a href="https://github.com/howayShi" class="item" target="_blank">GitHub</a>
-                
-                <a href="mailto:howayshi@163.com" class="item" target="_blank">Email</a>
-                
-            </div>
-            
+        </h3>
+        <div class="post-content-preview">
+              本篇用于记录向沐神学习深度学习的笔记
+线性回归从零开始实现从零开始实现整个方法，包括流水线、模型、损失函数和小批量随机梯度下降优化器。
+首先导入需要用到的科学计算包
+%matplotlib inline 
+import random
+import torch
+from d2l import torch as d2l
+根据带有噪声的线性模型构造一个人造数据集。y=Xw+b+e。这里使用线性......
         </div>
-        &copy; 2021 tomas<br />
-        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </a>
+    <p class="post-meta">
+        Posted by  on
+        2021-06-10
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2021/06/10/C++学习/">
+        <h2 class="post-title">
+            C++学习
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            指针...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by  on
+        2021-06-10
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2020/12/29/月度计划/">
+        <h2 class="post-title">
+            月度计划
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+2021工作计划表
+
+
+
+
+日程安排
+任务
+详细
+
+
+
+2021.6.20
+高等数学强化开始
+武忠祥强化课+660题复习+辅导讲义课后题
+
+
+...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by  on
+        2020-12-29
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2020/12/11/843大纲/">
+        <h2 class="post-title">
+            843自动控制原理复习大纲
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            一．总体要求本课程要求学生深刻领会控制系统的基本原理，掌握单输入单输出、线性定常连续控制系统的常用分析与综合方法。能够建立线性定常控制系统的数学模型，对简单的线性定常系统能够分别采用时域分析法、频率响应法和根轨迹法进行分析与综合。能够进行采样控制系统的建模和性能分析。掌握非线性控制系统的基本分析方法。
+二．考试范围、要点以及所占比例1.自动控制的基本概念（1）自动控制的基本概念；开环、闭环（......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by  on
+        2020-12-11
+    </p>
+
+</div>
+<hr>
+
+
+
+<!-- Pager -->
+
+<ul class="pager">
+    
+    
+</ul>
+
+
+
+                <!-- 如果开启评论功能 -->
+                
+
+            </div>
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+                <!-- Featured Tags -->
+                
+
+                <!-- Short About -->
+                <section class="visible-md visible-lg">
+                    <hr><h5><a href="/about/">ABOUT ME</a></h5>
+                    <div class="short-about">
+
+                        
+
+                        
+
+                        <!-- SNS Link -->
+                        <ul class="list-inline">
+                            
+                            
+                            
+
+                            
+
+                            
+
+                            
+                            
+                            
+                            
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- Friends Blog -->
+                
+            </div>
+        
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; tomas 2021 
+                    <br>
+                    Theme by <a target="_blank" rel="noopener" href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Ported by <a target="_blank" rel="noopener" href="http://blog.kaijun.rocks">Kaijun</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
     </div>
 </footer>
 
-        
-<script src="/js/main.js"></script>
+<!-- jQuery -->
 
-        
-    </body>
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://howayShi.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="https://howayShi.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
 </html>
