@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Stay hungry, stay foolish">
     <link rel="shortcut icon" href="http://some.url/to/favicon.ico">
-    <title>2016年-托马斯的个人网站</title>
+    <title>2021年华为云AI实战营作业-托马斯的个人网站</title>
 
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/academicons/1.8.6/css/academicons.min.css">
@@ -98,15 +98,15 @@
     <div class="jumbotron jumbotron-fluid">
     <div class="container">
         
-        <h1 class="mt-4 article-title page-title">2016年</h1>
+        <h1 class="mt-4 article-title page-title">2021年华为云AI实战营作业</h1>
         
-        <p class="lead text-gray mt-3">By Anonymous; Published on 2021-07-19</p>
+        <p class="lead text-gray mt-3">By Anonymous; Published on 2021-07-21</p>
         
         <div class="tags">
             <ul class="tag-list">
                 
                 <li class="tag-list-item">
-                    <a class="tag-list-link" href="/tags/%E5%BF%83%E6%83%85%E6%84%9F%E6%82%9F/">心情感悟</a>
+                    <a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
                 </li>
                 
             </ul>
@@ -120,9 +120,27 @@
                 <div class="row">
                     <div class="col-12">
                         <main>
-                            <article class="article-text page-content"><p>我必须说一点，就是我真的不是一个怀旧的人，不会怀恋之前的事情。每个阶段，初中高中大学毕业大家都难舍难分时候我都没有一点情绪，因为我觉得，熟悉的人日后还会联系，会合作，而以后不会联系的人，本来就不是一路人。至于那段时光，最宝贵的是那段青春的年龄。<br>但是，今天整理过去的邮件，发现了发给高中团委的社团总结，里面附带几张照片，思绪突然就回到那一年，2016年踌躇满志的时候。<br>我的高中是失败的，但也是丰富的，时至今日我仍不能告诉大家我高中做的是正确的事情，对我而言，高中的经历给我的，其实远不如一所更好大学能给我的。<br>不过，不管过去如何，再回忆这段，还是很有趣，16年应该是梦开始的时候，山西省青少年科技创新一等奖，去了西电科学营，科技社社长卸任，然后，考了全班的倒数第二名哈哈。其实我中考成绩不差的，也算佼佼者，至于从正数第二到了倒数第二，也是挺有趣的。我不是很想回忆这些，可能是想到这个有点自卑和懊恼把，后悔的情绪没什么用，我不能控制的话就不要让它产生了。<br>未来我会继续努力的，希望下次再提起2016年，提起2021年。我会觉得，这两个时间点，我都努力去追梦了，我也做到了。<br>慢一点没关系，正是多走了这几步路，我们才又看到同样的风景，再一次成为伙伴。</p>
-<hr>
-<h2 id="2016年社团结束合影"><a href="#2016年社团结束合影" class="headerlink" title="2016年社团结束合影"></a>2016年社团结束合影</h2><p><img src="/../images/2016-1.png" alt="p1"><br><img src="/../images/2016-2.png" alt="p1"><br><img src="/../images/2016-3.png" alt="p1"></p>
+                            <article class="article-text page-content"><h1 id="Python编程知识-字符串作业"><a href="#Python编程知识-字符串作业" class="headerlink" title="Python编程知识-字符串作业"></a>Python编程知识-字符串作业</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>输入一个字符串，求最大的没有重复字符的子字符串长度</p>
+<p>比如：输入huaweicloudaigallery</p>
+<p>输出 9 （huaweiclo或aweicloud或weiclouda）</p>
+<pre><code>string = input()  # 手动输入字符串  
+def func():
+    # 在此编写代码
+    n=len(string)
+    length=[]
+    for i in range(n):
+        substring=string[i] 
+        for j in range(i+1,n):#第二个字母开始判断有无重复
+            if string[j] in substring:  #in语句，判断string[j]在不在列表string里
+
+            length.append(len(substring)) #检测到重复字母，就把此刻      
+                break
+            else:
+                substring=substring+string[j] #如果没检测到重复字母的话，就补一个字母进去继续判断
+    maxlength=max(length)
+    print(maxlength)             
+
+func() #运行</code></pre>
 </article>
                         </main>
                         
@@ -136,42 +154,42 @@
     <div class="col">
         <nav aria-label="paginator" class="paginator">
             <ul class="pagination d-none d-md-flex pagination-lg justify-content-center">
-                <li class="page-item ">
+                <li class="page-item  disabled ">
                     <a class="page-link"
-                        href="/2021/07/21/2021%E5%8D%8E%E4%B8%BA%E4%BA%91AI%E5%AE%9E%E6%88%98%E8%90%A5%E4%BD%9C%E4%B8%9A/"
+                        href=""
                         aria-label="Previous">
                         <span aria-hidden="true">&laquo;
-                            2021年华为云AI实战营作业</span>
+                            No more</span>
                         <span class="sr-only">Previous</span>
                     </a>
                 </li>
                 <li class="page-item ">
                     <a class="page-link"
-                        href="/2021/06/15/%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                        href="/2021/07/19/2016%E5%B9%B4/"
                         aria-label="Next">
                         <span
-                            aria-hidden="true">单片机学习笔记
+                            aria-hidden="true">2016年
                             &raquo;</span>
                         <span class="sr-only">Next</span>
                     </a>
                 </li>
             </ul>
             <ul class="pagination d-md-none justify-content-center">
-                <li class="page-item ">
+                <li class="page-item  disabled ">
                     <a class="page-link"
-                        href="/2021/07/21/2021%E5%8D%8E%E4%B8%BA%E4%BA%91AI%E5%AE%9E%E6%88%98%E8%90%A5%E4%BD%9C%E4%B8%9A/"
+                        href=""
                         aria-label="Previous">
                         <span aria-hidden="true">&laquo;
-                            2021年华为云AI实战营作业</span>
+                            No more</span>
                         <span class="sr-only">Previous</span>
                     </a>
                 </li>
                 <li class="page-item ">
                     <a class="page-link"
-                        href="/2021/06/15/%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                        href="/2021/07/19/2016%E5%B9%B4/"
                         aria-label="Next">
                         <span
-                            aria-hidden="true">单片机学习笔记
+                            aria-hidden="true">2016年
                             &raquo;</span>
                         <span class="sr-only">Next</span>
                     </a>
@@ -198,7 +216,7 @@
                     <div class="row toc-container">
                         <div class="col-12">
                             <h6>NAVIGATION</h6>
-                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2016%E5%B9%B4%E7%A4%BE%E5%9B%A2%E7%BB%93%E6%9D%9F%E5%90%88%E5%BD%B1"><span class="toc-text">2016年社团结束合影</span></a></li></ol>
+                            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python%E7%BC%96%E7%A8%8B%E7%9F%A5%E8%AF%86-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%BD%9C%E4%B8%9A"><span class="toc-text">Python编程知识-字符串作业</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-text">题目描述</span></a></li></ol></li></ol>
                         </div>
                     </div>
                 </div>
