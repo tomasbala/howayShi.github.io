@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Stay hungry, stay foolish">
     <link rel="shortcut icon" href="http://some.url/to/favicon.ico">
-    <title>控制课后题-托马斯的个人网站</title>
+    <title>概率论笔记-托马斯的个人网站</title>
 
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/academicons/1.8.6/css/academicons.min.css">
@@ -98,9 +98,9 @@
     <div class="jumbotron jumbotron-fluid">
     <div class="container">
         
-        <h1 class="mt-4 article-title page-title">控制课后题</h1>
+        <h1 class="mt-4 article-title page-title">概率论笔记</h1>
         
-        <p class="lead text-gray mt-3">By Anonymous; Published on 2021-08-12</p>
+        <p class="lead text-gray mt-3">By Anonymous; Published on 2021-08-20</p>
         
         <div class="tags">
             <ul class="tag-list">
@@ -120,45 +120,97 @@
                 <div class="row">
                     <div class="col-12">
                         <main>
-                            <article class="article-text page-content"><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2>
-
-	<div class="row">
-    <embed src="chapter2.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2>
-
-	<div class="row">
-    <embed src="chapter3.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2>
-
-	<div class="row">
-    <embed src="chapter4.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-<h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2>
-
-	<div class="row">
-    <embed src="chapter5.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-<h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2>
-
-	<div class="row">
-    <embed src="chapter6.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
+                            <article class="article-text page-content"><h1 id="第一部分-随机事件和概率"><a href="#第一部分-随机事件和概率" class="headerlink" title="第一部分 随机事件和概率"></a>第一部分 随机事件和概率</h1><ul>
+<li>古典概型求概率</li>
+<li>几何概型求概率</li>
+<li>重要公式求概率<ul>
+<li>对立</li>
+<li>互斥</li>
+<li>独立</li>
+<li>条件</li>
+<li>不等式或包含</li>
+<li>用最值</li>
+</ul>
+</li>
+<li>事件的独立性</li>
+</ul>
+<hr>
+<h1 id="第二部分-变量及其分布"><a href="#第二部分-变量及其分布" class="headerlink" title="第二部分 变量及其分布"></a>第二部分 变量及其分布</h1><ul>
+<li>一维随机变量及其分布<ul>
+<li>判分布</li>
+<li>求分布</li>
+<li>用分布</li>
+</ul>
+</li>
+<li>一维随机变量函数的分布<ul>
+<li>离散型-离散型</li>
+<li>连续型-连续型（或混合型）<ul>
+<li>分布函数法</li>
+<li>公式法</li>
+</ul>
+</li>
+<li>连续型-离散型</li>
+</ul>
+</li>
+<li>多维随机变量<ul>
+<li>判分布</li>
+<li>求分布</li>
+<li>用分布</li>
+</ul>
+</li>
+<li>多维随机变量函数的分布<ul>
+<li>多维-一维<ul>
+<li>（离散型，离散型）-离散型</li>
+<li>（连续型，连续型）-连续型</li>
+<li>（离散型，连续型）-连续型</li>
+</ul>
+</li>
+<li>一维-多维</li>
+<li>多维-多维</li>
+</ul>
+</li>
+</ul>
+<p>知识点补充：  </p>
+<ol>
+<li>二项分布中，通过后项比前项推导，事件最有可能发生的次数k:(n+1)p-1≤k≤(n+1)p </li>
+<li>泊松定理：二项分布X，当n很大，p很小，入=np适中时，二项分布可用泊松分布近似表示。一般n≥ 20，p≤0.05时候逼近效果比较好，特别当n≥ 100，np≤10时候，逼近效果最佳。 </li>
+<li>(X,Y)<del>N,则两个条件概率也</del>N</li>
+<li>卷积公式：积谁不换谁，换完求偏导</li>
+<li>（重要）。设X、Y相互独立，则：<ul>
+<li>X<del>B1，Y</del>B2，X+Y~B（n+m，p）</li>
+<li>X<del>P1，Y</del>P2，X+Y~P(入1+入2)</li>
+<li>X<del>N1, Y</del>N2, X+Y=(1+2,1+2)</li>
+<li>X<del>入1,Y</del>入2，X+Y=入（1+2）</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="第三部分-分析基础"><a href="#第三部分-分析基础" class="headerlink" title="第三部分 分析基础"></a>第三部分 分析基础</h1><p>数字特征<br>大数定律与中心极限定理<br>统计量及其分布  </p>
+<h1 id="第四部分-参数估计与假设检验"><a href="#第四部分-参数估计与假设检验" class="headerlink" title="第四部分 参数估计与假设检验"></a>第四部分 参数估计与假设检验</h1><ol>
+<li>矩估计<ul>
+<li>一个参数</li>
+<li>两个参数</li>
+</ul>
+</li>
+<li>最大似然估计<ol>
+<li>写似然函数</li>
+<li>求参数</li>
+<li>不变性原则</li>
+</ol>
+</li>
+<li>估计量的评价  <ul>
+<li>无偏性</li>
+<li>有效性</li>
+<li>一致性（相合性）</li>
+</ul>
+</li>
+<li>区间估计与假设检验<ul>
+<li>区间估计</li>
+<li>假设检验</li>
+<li>两类错误</li>
+</ul>
+</li>
+</ol>
 </article>
                         </main>
                         
@@ -172,42 +224,42 @@
     <div class="col">
         <nav aria-label="paginator" class="paginator">
             <ul class="pagination d-none d-md-flex pagination-lg justify-content-center">
-                <li class="page-item ">
+                <li class="page-item  disabled ">
                     <a class="page-link"
-                        href="/2021/08/20/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%AC%94%E8%AE%B0/"
+                        href=""
                         aria-label="Previous">
                         <span aria-hidden="true">&laquo;
-                            概率论笔记</span>
+                            No more</span>
                         <span class="sr-only">Previous</span>
                     </a>
                 </li>
                 <li class="page-item ">
                     <a class="page-link"
-                        href="/2021/08/09/%E8%8B%B1%E8%AF%AD%E9%95%BF%E9%9A%BE%E5%8F%A5/"
+                        href="/2021/08/12/%E6%8E%A7%E5%88%B6%E8%AF%BE%E5%90%8E%E9%A2%98/"
                         aria-label="Next">
                         <span
-                            aria-hidden="true">英语长难句
+                            aria-hidden="true">控制课后题
                             &raquo;</span>
                         <span class="sr-only">Next</span>
                     </a>
                 </li>
             </ul>
             <ul class="pagination d-md-none justify-content-center">
-                <li class="page-item ">
+                <li class="page-item  disabled ">
                     <a class="page-link"
-                        href="/2021/08/20/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%AC%94%E8%AE%B0/"
+                        href=""
                         aria-label="Previous">
                         <span aria-hidden="true">&laquo;
-                            概率论笔记</span>
+                            No more</span>
                         <span class="sr-only">Previous</span>
                     </a>
                 </li>
                 <li class="page-item ">
                     <a class="page-link"
-                        href="/2021/08/09/%E8%8B%B1%E8%AF%AD%E9%95%BF%E9%9A%BE%E5%8F%A5/"
+                        href="/2021/08/12/%E6%8E%A7%E5%88%B6%E8%AF%BE%E5%90%8E%E9%A2%98/"
                         aria-label="Next">
                         <span
-                            aria-hidden="true">英语长难句
+                            aria-hidden="true">控制课后题
                             &raquo;</span>
                         <span class="sr-only">Next</span>
                     </a>
@@ -234,7 +286,7 @@
                     <div class="row toc-container">
                         <div class="col-12">
                             <h6>NAVIGATION</h6>
-                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="toc-text">第二章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="toc-text">第三章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0"><span class="toc-text">第四章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0"><span class="toc-text">第五章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0"><span class="toc-text">第六章</span></a></li></ol>
+                            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E5%92%8C%E6%A6%82%E7%8E%87"><span class="toc-text">第一部分 随机事件和概率</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83"><span class="toc-text">第二部分 变量及其分布</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86-%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80"><span class="toc-text">第三部分 分析基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86-%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%E4%B8%8E%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C"><span class="toc-text">第四部分 参数估计与假设检验</span></a></li></ol>
                         </div>
                     </div>
                 </div>
